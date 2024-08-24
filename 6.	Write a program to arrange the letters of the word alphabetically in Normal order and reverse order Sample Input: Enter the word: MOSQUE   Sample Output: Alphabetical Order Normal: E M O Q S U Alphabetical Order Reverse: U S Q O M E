@@ -1,0 +1,8 @@
+def arrange_letters(word):
+    normal_order = ''.join(sorted(word))
+    reverse_order = ''.join(sorted(word, reverse=True))
+    return normal_order, reverse_order
+input_word = input("Enter the word: ")
+normal, reverse = arrange_letters(input_word)
+print(f"Normal Order: {normal}")
+print(f"Reverse Order: {reverse}")
