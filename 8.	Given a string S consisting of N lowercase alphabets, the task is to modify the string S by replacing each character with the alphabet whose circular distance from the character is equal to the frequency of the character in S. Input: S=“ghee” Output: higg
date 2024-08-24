@@ -1,0 +1,12 @@
+def modify_string(S):
+    from collections import Counter
+    freq = Counter(S)
+    modified_string = []
+    for char in S:
+        distance = freq[char]
+        new_char = chr((ord(char) - ord('a') + distance) % 26 + ord('a'))
+        modified_string.append(new_char)
+    return ''.join(modified_string)
+input_string = "ghee"
+output_string = modify_string(input_string)
+print(output_string)  
